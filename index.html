@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPARATIVO | RD STATION x KOMMO - Intraoss</title>
+    
+    <!-- Tailwind CSS para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Configurações Customizadas do Tailwind para as cores do cliente e da V4 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        cliente: {
+                            primaria: '#EFEFEF',
+                            secundaria: '#973F8A'
+                        },
+                        v4: {
+                            vermelho: '#E50914',
+                            verde: '#16A111'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Ajuste de scroll suave */
+        html { scroll-behavior: smooth; }
+        /* Compensação do cabeçalho fixo no scroll */
+        section { scroll-margin-top: 100px; }
+        
+        /* Efeito de hover nos cards */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased pt-20"> <!-- pt-20 compensa o header fixo -->
+
+    <!-- CABEÇALHO FIXO -->
+    <header class="fixed top-0 left-0 w-full bg-cliente-primaria shadow-md z-50 h-20 flex items-center transition-all duration-300">
+        <div class="container mx-auto px-4 flex justify-center items-center gap-8">
+            <img src="https://brand.v4company.com/_next/image?url=%2Fimages%2Flogos%2Fsimbolo-company.webp&w=256&q=75" alt="V4 Company Logo" class="h-10 object-contain">
+            <div class="h-10 w-px bg-gray-300"></div>
+            <img src="https://github.com/ohebertfernandes/bancodeimagens/blob/main/image.png?raw=true" alt="Intraoss Logo" class="h-12 object-contain">
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="bg-cliente-primaria py-16 text-center border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">
+                COMPARATIVO <br class="md:hidden"> 
+                <span class="text-blue-600">RD STATION</span> 
+                <span class="text-gray-400 mx-2">x</span> 
+                <span class="text-cliente-secundaria">KOMMO</span>
+            </h1>
+            <p class="text-xl font-medium text-gray-600 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-bullseye text-cliente-secundaria"></i> Cenário analisado: <strong class="text-gray-800">Intraoss</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- 1. ESTABILIDADE DO WHATSAPP -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-10">
+                <div class="inline-block p-4 rounded-full bg-blue-50 text-blue-600 mb-4">
+                    <i class="fa-brands fa-whatsapp text-4xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800">1. Estabilidade do WhatsApp</h2>
+                <div class="w-24 h-1 bg-cliente-secundaria mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- RD Station -->
+                <div class="bg-gray-50 rounded-2xl p-8 border-t-4 border-blue-500 card-hover">
+                    <h3 class="text-2xl font-bold text-blue-700 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-server"></i> RD STATION
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span class="font-medium text-gray-700">100% API Oficial Meta</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span class="text-gray-600">Maior estabilidade</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span class="text-gray-600">Menor risco de perda de mensagens</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span class="text-gray-600">Menor chance de bloqueio</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-500 mt-1"></i> <span class="text-gray-600">Estrutura mais corporativa</span></li>
+                    </ul>
+                </div>
+
+                <!-- Kommo -->
+                <div class="bg-gray-50 rounded-2xl p-8 border-t-4 border-cliente-secundaria card-hover">
+                    <h3 class="text-2xl font-bold text-cliente-secundaria mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-mobile-screen"></i> KOMMO
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-dot text-gray-400 mt-1 text-sm"></i> <span class="text-gray-600">Pode operar com API oficial ou não oficial</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-circle-dot text-gray-400 mt-1 text-sm"></i> <span class="text-gray-600">Muitos projetos usam estrutura paralela</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-triangle-exclamation text-yellow-500 mt-1"></i> <span class="text-gray-600">Maior risco de instabilidade dependendo da configuração</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-triangle-exclamation text-yellow-500 mt-1"></i> <span class="text-gray-600">Mais sensível a falhas de integração</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Veredito -->
+            <div class="mt-8 bg-cliente-secundaria text-white rounded-xl p-6 shadow-lg flex flex-col md:flex-row items-center gap-6">
+                <div class="bg-white/20 p-4 rounded-full">
+                    <i class="fa-solid fa-trophy text-3xl text-yellow-300"></i>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-2">Melhor opção para a Intraoss: RD Station</h4>
+                    <p class="text-white/90"><strong>Motivo:</strong> Vocês já tiveram problemas graves de perda de mensagens anteriormente. O RD reduz muito esse risco.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. CENTRALIZAÇÃO DE ATENDIMENTO -->
+    <section class="py-16 bg-cliente-primaria">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-10">
+                <div class="inline-block p-4 rounded-full bg-white text-cliente-secundaria mb-4 shadow-sm">
+                    <i class="fa-solid fa-users-viewfinder text-4xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800">2. Centralização de Atendimento</h2>
+                <div class="w-24 h-1 bg-cliente-secundaria mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">RD STATION</h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium"><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp</span>
+                        <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-medium"><i class="fa-brands fa-instagram mr-1"></i> Instagram</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium"><i class="fa-brands fa-facebook mr-1"></i> Facebook</span>
+                        <span class="px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-sm font-medium"><i class="fa-brands fa-telegram mr-1"></i> Telegram</span>
+                        <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium"><i class="fa-solid fa-envelope mr-1"></i> E-mail</span>
+                    </div>
+                    <p class="text-gray-600 font-medium"><i class="fa-solid fa-layer-group text-blue-500 mr-2"></i> Tudo centralizado em um único painel</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">KOMMO</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-cliente-secundaria mt-1"></i> <span class="text-gray-600">Também possui centralização</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-cliente-secundaria mt-1"></i> <span class="text-gray-600">Boa experiência visual</span></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-cliente-secundaria mt-1"></i> <span class="text-gray-600">Funciona bem para times menores</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-gray-200 text-gray-800 rounded-xl p-6 text-center shadow-inner border border-gray-300">
+                <i class="fa-solid fa-handshake text-2xl text-gray-600 mb-2"></i>
+                <h4 class="text-lg font-bold">Empate técnico</h4>
+                <p class="text-gray-600 mt-1">As duas resolvem bem essa parte.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. AUTOMAÇÕES E IA -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-10">
+                <div class="inline-block p-4 rounded-full bg-purple-50 text-purple-600 mb-4">
+                    <i class="fa-solid fa-robot text-4xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800">3. Automações e IA</h2>
+                <div class="w-24 h-1 bg-cliente-secundaria mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 rounded-2xl p-8 border-l-4 border-blue-500 card-hover">
+                    <h3 class="text-xl font-bold text-blue-700 mb-4">RD STATION</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-microchip text-blue-400"></i> <span class="text-gray-700 font-medium">IA mais robusta</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-gears text-blue-400"></i> <span class="text-gray-700">Automações mais maduras</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-diagram-project text-blue-400"></i> <span class="text-gray-700">Fluxos inteligentes</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-rotate-left text-blue-400"></i> <span class="text-gray-700">Recontato automático</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-brain text-blue-400"></i> <span class="text-gray-700">Melhor leitura de contexto</span></li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8 border-l-4 border-cliente-secundaria card-hover">
+                    <h3 class="text-xl font-bold text-cliente-secundaria mb-4">KOMMO</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-gear text-gray-400"></i> <span class="text-gray-700">Possui automações</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-robot text-gray-400"></i> <span class="text-gray-700">IA mais limitada</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-code-branch text-gray-400"></i> <span class="text-gray-700">Fluxos mais simples</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 bg-blue-50 border border-blue-200 rounded-xl p-6 flex flex-col md:flex-row items-center gap-6">
+                <div class="text-blue-500 text-4xl"><i class="fa-solid fa-lightbulb"></i></div>
+                <div>
+                    <h4 class="text-lg font-bold text-blue-800 mb-1">Melhor opção: RD Station</h4>
+                    <p class="text-blue-900"><strong>Motivo:</strong> A Intraoss perde muitos leads por falta de acompanhamento. O RD tem mais capacidade de automatizar esse retorno.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FUNIL E CRM -->
+    <section class="py-16 bg-cliente-primaria">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-10">
+                <div class="inline-block p-4 rounded-full bg-white text-cliente-secundaria mb-4 shadow-sm">
+                    <i class="fa-solid fa-filter text-4xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800">4. Funil e CRM</h2>
+                <div class="w-24 h-1 bg-cliente-secundaria mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">RD STATION</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-chart-column text-blue-500"></i> <span class="text-gray-600">CRM estruturado</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-eye text-blue-500"></i> <span class="text-gray-600">Funil visual</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-magnifying-glass-chart text-blue-500"></i> <span class="text-gray-600">Rastreio de histórico</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-users-rays text-blue-500"></i> <span class="text-gray-600">Segmentações avançadas</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-file-invoice text-blue-500"></i> <span class="text-gray-600 font-medium">Relatórios mais completos</span></li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">KOMMO</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-list-ul text-cliente-secundaria"></i> <span class="text-gray-600">CRM mais simples</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-image text-cliente-secundaria"></i> <span class="text-gray-600">Visual mais leve</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-child-reaching text-cliente-secundaria"></i> <span class="text-gray-600 font-medium">Fácil de usar</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 grid md:grid-cols-2 gap-4">
+                <div class="bg-gray-800 text-white rounded-lg p-4 text-center">
+                    <p class="text-sm text-gray-300">Melhor para operação complexa:</p>
+                    <p class="font-bold text-lg text-blue-400">RD Station</p>
+                </div>
+                <div class="bg-gray-800 text-white rounded-lg p-4 text-center">
+                    <p class="text-sm text-gray-300">Melhor para operação simples:</p>
+                    <p class="font-bold text-lg text-cliente-secundaria">Kommo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. EXPERIÊNCIA DA EQUIPE & 6. ESCALABILIDADE -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-6xl">
+            
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Tópico 5 -->
+                <div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 rounded-full bg-cliente-primaria text-cliente-secundaria">
+                            <i class="fa-solid fa-user-tie text-2xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">5. Experiência da Equipe</h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="border border-gray-200 rounded-xl p-5">
+                            <h3 class="font-bold text-blue-700 mb-2">RD STATION</h3>
+                            <p class="text-gray-600 text-sm mb-1">• Mais robusto</p>
+                            <p class="text-gray-600 text-sm mb-1">• Exige maior organização</p>
+                            <p class="text-gray-600 text-sm">• Mais recursos</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-xl p-5">
+                            <h3 class="font-bold text-cliente-secundaria mb-2">KOMMO</h3>
+                            <p class="text-gray-600 text-sm mb-1">• Mais simples</p>
+                            <p class="text-gray-600 text-sm mb-1">• Curva de aprendizado menor</p>
+                            <p class="text-gray-600 text-sm">• Mais "leve" operacionalmente</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 flex flex-col gap-2">
+                        <div class="bg-gray-50 p-3 rounded text-sm border-l-4 border-cliente-secundaria">
+                            <span class="font-medium">Melhor para adaptação rápida:</span> Kommo
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded text-sm border-l-4 border-blue-500">
+                            <span class="font-medium">Melhor para crescimento estruturado:</span> RD Station
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tópico 6 -->
+                <div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 rounded-full bg-cliente-primaria text-cliente-secundaria">
+                            <i class="fa-solid fa-arrow-trend-up text-2xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800">6. Escalabilidade</h2>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="border border-gray-200 rounded-xl p-5 bg-blue-50/50">
+                            <h3 class="font-bold text-blue-700 mb-2">RD STATION</h3>
+                            <ul class="text-gray-700 text-sm space-y-1">
+                                <li>• Melhor para crescimento</li>
+                                <li>• Aguenta operação maior</li>
+                                <li>• Melhor estrutura para múltiplos atendentes</li>
+                                <li>• Melhor para integração futura</li>
+                            </ul>
+                        </div>
+                        <div class="border border-gray-200 rounded-xl p-5">
+                            <h3 class="font-bold text-cliente-secundaria mb-2">KOMMO</h3>
+                            <ul class="text-gray-600 text-sm space-y-1">
+                                <li>• Funciona muito bem em operações pequenas e médias</li>
+                                <li>• Pode começar a limitar conforme crescimento</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 bg-cliente-secundaria text-white p-4 rounded-lg text-center shadow">
+                        <span class="font-medium">Melhor para longo prazo:</span> RD Station
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PÓS-VENDA E AUTOMAÇÕES FUTURAS -->
+    <section class="py-16 bg-cliente-primaria border-y border-gray-200">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-10">
+                <div class="inline-block p-4 rounded-full bg-white text-cliente-secundaria mb-4 shadow-sm">
+                    <i class="fa-solid fa-hand-holding-heart text-4xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800">7. Pós-venda e Automações Futuras</h2>
+                <div class="w-24 h-1 bg-cliente-secundaria mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="grid md:grid-cols-2">
+                    <!-- RD -->
+                    <div class="p-8 border-b md:border-b-0 md:border-r border-gray-100 bg-blue-50/30">
+                        <h3 class="text-2xl font-bold text-blue-700 mb-4">RD STATION</h3>
+                        <p class="text-gray-700 font-medium mb-2"><i class="fa-solid fa-plug text-blue-400 mr-2"></i> Melhor integração com APIs</p>
+                        <p class="text-gray-700 font-medium mb-4"><i class="fa-solid fa-bolt text-blue-400 mr-2"></i> Melhor capacidade de automação</p>
+                        
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                            <p class="text-sm text-gray-500 font-bold mb-3 uppercase tracking-wide">Permite fluxos como:</p>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-box text-gray-400 text-sm"></i> Pedido saiu</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-truck-fast text-gray-400 text-sm"></i> Pedido enviado</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-barcode text-gray-400 text-sm"></i> Código de rastreio</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-cart-arrow-down text-gray-400 text-sm"></i> Recompra</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-headset text-gray-400 text-sm"></i> Pós-venda automático</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Kommo -->
+                    <div class="p-8 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-cliente-secundaria mb-4">KOMMO</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-gray-400"></i> <span class="text-gray-700">Consegue fazer</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-triangle-exclamation text-yellow-500 mt-1"></i> <span class="text-gray-700">Mas normalmente exige mais adaptação externa</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-800 text-white text-center p-4">
+                    <p class="text-lg"><span class="font-light">Melhor para o projeto futuro da Intraoss:</span> <strong class="text-blue-400">RD Station</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CUSTO E PROPOSTA V4 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <div class="inline-block p-4 rounded-full bg-v4-vermelho/10 text-v4-vermelho mb-4">
+                    <i class="fa-solid fa-coins text-4xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900">8. Custo</h2>
+                <div class="w-24 h-1 bg-v4-vermelho mx-auto mt-4 rounded"></div>
+            </div>
+
+            <!-- Preços lado a lado -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                
+                <!-- Kommo Preço -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200 relative overflow-hidden">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Kommo</h3>
+                    <div class="text-center mb-6">
+                        <span class="inline-block px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm font-semibold mb-2">Plano Pro</span>
+                        <p class="text-gray-600">R$ 188 por usuário/mês</p>
+                        <p class="text-sm text-gray-500">Considerando 10 usuários</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-4 text-center shadow-sm border border-gray-100">
+                        <p class="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-1">Total</p>
+                        <p class="text-3xl font-bold text-gray-800">R$ 1.880<span class="text-lg text-gray-500 font-normal">/mês</span></p>
+                        <p class="text-xs text-gray-400 mt-1">(188 × 10)</p>
+                    </div>
+                </div>
+
+                <!-- RD Preço PROPOSTA V4 -->
+                <div class="bg-white rounded-2xl p-8 border-2 border-v4-verde shadow-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-v4-vermelho text-white text-xs font-bold px-3 py-1 rounded-bl-lg">PROPOSTA V4</div>
+                    
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2 text-center">RD Station</h3>
+                    
+                    <div class="mb-6 space-y-4">
+                        <div class="bg-gray-50 p-3 rounded-lg text-sm border border-gray-100 opacity-70">
+                            <p class="font-bold text-gray-600 mb-1">Valores Oficiais (Sem desconto):</p>
+                            <div class="flex justify-between text-gray-500"><span>CRM PRO:</span> <span>R$ 1.131/mês</span></div>
+                            <div class="flex justify-between text-gray-500"><span>RD Conversas PRO:</span> <span>R$ 2.999/mês</span></div>
+                            <div class="flex justify-between font-bold text-gray-600 mt-1 pt-1 border-t"><span>Total oficial:</span> <span>R$ 4.130/mês</span></div>
+                        </div>
+
+                        <div>
+                            <p class="text-center font-extrabold text-v4-verde mb-2"><i class="fa-solid fa-tag"></i> Condição apresentada na proposta (40% OFF)</p>
+                            <div class="flex justify-between text-gray-700 font-medium"><span>CRM:</span> <span>R$ 786/mês</span></div>
+                            <div class="flex justify-between text-gray-700 font-medium"><span>Conversas:</span> <span>R$ 1.799/mês</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-v4-verde text-white rounded-xl p-4 text-center shadow-md">
+                        <p class="text-white/80 text-sm font-semibold uppercase tracking-wider mb-1">Total com desconto</p>
+                        <p class="text-4xl font-black">R$ 2.585<span class="text-lg font-normal opacity-80">/mês</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diferença Financeira -->
+            <div class="max-w-2xl mx-auto mb-16">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+                    <div class="bg-gray-100 px-6 py-3 border-b border-gray-200">
+                        <h4 class="font-bold text-gray-700 text-center uppercase tracking-wide">Diferença Financeira</h4>
+                    </div>
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50 text-gray-500 text-sm">
+                                <th class="py-3 px-6 border-b">Plataforma</th>
+                                <th class="py-3 px-6 border-b text-right">Valor Mensal</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700">
+                            <tr>
+                                <td class="py-3 px-6 border-b font-medium">Kommo</td>
+                                <td class="py-3 px-6 border-b text-right">R$ 1.880</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-6 border-b font-medium text-v4-verde">RD Station (com desconto)</td>
+                                <td class="py-3 px-6 border-b text-right text-v4-verde font-bold">R$ 2.585</td>
+                            </tr>
+                            <tr class="bg-red-50/50">
+                                <td class="py-4 px-6 font-bold text-gray-800">Diferença</td>
+                                <td class="py-4 px-6 text-right font-black text-v4-vermelho text-lg">+ R$ 705/mês</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Cenário Estratégico -->
+            <div>
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-8 flex justify-center items-center gap-2">
+                    <i class="fa-solid fa-chess-knight text-v4-vermelho"></i> Cenário Estratégico
+                </h3>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Choose Kommo -->
+                    <div class="bg-gray-50 rounded-xl p-6 border-t-4 border-gray-400">
+                        <h4 class="font-bold text-lg mb-4 text-gray-700">Escolha a Kommo se:</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-gray-400 mt-1"></i> <span class="text-sm text-gray-600">O foco principal é WhatsApp e velocidade comercial</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-gray-400 mt-1"></i> <span class="text-sm text-gray-600">Quer uma operação mais leve</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-gray-400 mt-1"></i> <span class="text-sm text-gray-600">Time comercial trabalha muito no conversational sales</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-gray-400 mt-1"></i> <span class="text-sm text-gray-600">Quer economizar no custo mensal</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-gray-400 mt-1"></i> <span class="text-sm text-gray-600">Pretende integrar automações externas via n8n</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Choose RD -->
+                    <div class="bg-red-50/30 rounded-xl p-6 border-t-4 border-v4-vermelho">
+                        <h4 class="font-bold text-lg mb-4 text-gray-900">Escolha a RD Station se:</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-v4-vermelho mt-1"></i> <span class="text-sm text-gray-800 font-medium">Quer centralizar marketing + vendas + atendimento</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-v4-vermelho mt-1"></i> <span class="text-sm text-gray-800">Precisa de campanhas, automações de marketing e nutrição</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-v4-vermelho mt-1"></i> <span class="text-sm text-gray-800">Precisa de relatórios mais robustos</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-v4-vermelho mt-1"></i> <span class="text-sm text-gray-800">Quer uma estrutura mais enterprise</span></li>
+                            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-v4-vermelho mt-1"></i> <span class="text-sm text-gray-800">O inbound marketing será forte na operação</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONCLUSÃO -->
+    <section class="py-20 bg-cliente-secundaria text-white relative overflow-hidden">
+        <!-- Elemento de fundo decorativo -->
+        <div class="absolute top-0 right-0 opacity-10 pointer-events-none transform translate-x-1/3 -translate-y-1/4">
+            <i class="fa-solid fa-chart-line text-[300px]"></i>
+        </div>
+
+        <div class="container mx-auto px-4 max-w-4xl relative z-10">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-extrabold mb-4 tracking-tight">CONCLUSÃO</h2>
+                <div class="w-24 h-1 bg-white mx-auto rounded opacity-50"></div>
+            </div>
+
+            <p class="text-xl text-center mb-10 font-light leading-relaxed">
+                Pelo cenário atual da <strong class="font-bold">Intraoss</strong>, entendemos que o <strong class="font-bold text-yellow-300">RD Station é a plataforma mais adequada</strong> porque:
+            </p>
+
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-10 border border-white/20">
+                <ul class="space-y-6 text-lg">
+                    <li class="flex items-start gap-4">
+                        <div class="bg-white text-cliente-secundaria p-1 rounded-full mt-1"><i class="fa-solid fa-check w-5 h-5 flex items-center justify-center"></i></div>
+                        <span>Resolve o principal problema atual: <strong>perda e desorganização dos atendimentos</strong></span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="bg-white text-cliente-secundaria p-1 rounded-full mt-1"><i class="fa-solid fa-check w-5 h-5 flex items-center justify-center"></i></div>
+                        <span>Possui estrutura mais robusta para alto volume</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="bg-white text-cliente-secundaria p-1 rounded-full mt-1"><i class="fa-solid fa-check w-5 h-5 flex items-center justify-center"></i></div>
+                        <span>Permite crescimento operacional sem precisar trocar de ferramenta depois</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="bg-white text-cliente-secundaria p-1 rounded-full mt-1"><i class="fa-solid fa-check w-5 h-5 flex items-center justify-center"></i></div>
+                        <span>Tem automações mais maduras para atendimento, recuperação e pós-venda</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="bg-white text-cliente-secundaria p-1 rounded-full mt-1"><i class="fa-solid fa-check w-5 h-5 flex items-center justify-center"></i></div>
+                        <span>Reduz dependência operacional do time</span>
+                    </li>
+                </ul>
+            </div>
+
+            <p class="text-center text-white/90 leading-relaxed text-lg bg-black/20 p-6 rounded-xl">
+                O Kommo continua sendo uma ótima ferramenta, principalmente para operações menores e mais simples, porém entendemos que para o momento e crescimento da Intraoss o <strong class="text-white font-bold">RD entrega mais segurança e escalabilidade.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- RODAPÉ V4 -->
+    <footer class="bg-v4-vermelho text-white py-12">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
+            
+            <div class="flex-shrink-0">
+                <img src="https://i.imgur.com/SU08Zb0.png" alt="Logotipo V4 Silva Anchieta & Co" class="h-20 object-contain drop-shadow-md">
+            </div>
+            
+            <div class="text-center md:text-right space-y-2">
+                <h4 class="text-xl font-bold tracking-wider">V4 Silva Anchieta & Co</h4>
+                <p class="flex items-center justify-center md:justify-end gap-2 text-white/90">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Whatsapp: (19) 98916-5165
+                </p>
+                <a href="http://www.edmarsilva.com.br" target="_blank" class="inline-block mt-2 font-medium border-b border-transparent hover:border-white transition-colors duration-300">
+                    <i class="fa-solid fa-globe mr-1"></i> www.edmarsilva.com.br
+                </a>
+            </div>
+            
+        </div>
+    </footer>
+
+</body>
+</html>
